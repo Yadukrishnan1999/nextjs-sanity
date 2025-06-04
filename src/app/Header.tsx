@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ZipCareLogo from "../../public/ZipCare.png";
 import PhoneIcon from "../../public/phone.svg";
+import Link from "next/link";
 
 const ContactDetails = () => {
   return (
@@ -21,9 +22,11 @@ const ContactDetails = () => {
 const Header = () => {
   return (
     <div className="flex items-center p-4 justify-between">
-      <div>
-        <Image height={70} width={70} src={ZipCareLogo} alt={"ZIpCare"} />
-      </div>
+      <Link href={"/"}>
+        <div>
+          <Image height={70} width={70} src={ZipCareLogo} alt={"ZIpCare"} />
+        </div>
+      </Link>
       <div>
         <ContactDetails />
       </div>
