@@ -6,7 +6,7 @@ import MainBanner from "./MainBanner";
 import MustReads from "./MustReads";
 import ViewAllArticles from "./ViewAllArticles";
 
-const HomePage = async () => {
+export async function getServerSideProps() {
   let project;
   try {
     project = await getHomePageData();
@@ -14,6 +14,14 @@ const HomePage = async () => {
     console.log("error", e);
   }
 
+  return {
+    props: {
+      project,
+    },
+  };
+}
+
+const HomePage = ({ project }: any) => {
   return (
     <div>
       <MainBanner data={project?.banners[0]} />
