@@ -24,6 +24,9 @@ export default async function Home() {
           <Image height={200} width={200} src={Logo} alt={"ZipCare"} />
         </Link>
       </div>
+      <span className="text-sm text-gray-400 pt-2">
+        Click the logo to goto home page
+      </span>
     </div>
   );
 }
