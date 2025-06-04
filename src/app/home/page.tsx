@@ -6,33 +6,26 @@ import MainBanner from "./MainBanner";
 import MustReads from "./MustReads";
 import ViewAllArticles from "./ViewAllArticles";
 
-export async function getServerSideProps() {
-  let project;
+export default async function HomePage() {
+  let project: any;
   try {
     project = await getHomePageData();
   } catch (e) {
-    console.log("error", e);
+    console.error("Error fetching home page data", e);
+    project = null;
   }
 
-  return {
-    props: {
-      project,
-    },
-  };
-}
-
-const HomePage = ({ project }: any) => {
   return (
     <div>
-      <MainBanner data={project?.banners[0]} />
+      <MainBanner data={project?.banners?.[0]} />
       <div className="px-[20px] pt-[20px] lg:px-[50px] bg-white pb-8">
         <div className="font-bold text-[30px] md:text-[30px] text-blue-800 pt-3 bg-red pb-[15px]">
-          Inshight on tech care
+          Insight on tech care
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {project?.insights?.map((data: any, index: any) => {
-            return <Insights key={index} data={data} />;
-          })}
+          {project?.insights?.map((data: any, index: number) => (
+            <Insights key={index} data={data} />
+          ))}
         </div>
         <ViewAllArticles />
       </div>
@@ -41,9 +34,9 @@ const HomePage = ({ project }: any) => {
           Must reads!
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          {project?.mustReads?.map((data: any, index: any) => {
-            return <MustReads key={index} data={data} />;
-          })}
+          {project?.mustReads?.map((data: any, index: number) => (
+            <MustReads key={index} data={data} />
+          ))}
         </div>
         <ViewAllArticles />
       </div>
@@ -55,6 +48,4 @@ const HomePage = ({ project }: any) => {
       </div>
     </div>
   );
-};
-
-export default HomePage;
+}
