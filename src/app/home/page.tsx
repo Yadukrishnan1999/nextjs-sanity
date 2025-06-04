@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getHomePageData } from "../../../sanity/sanity-utility";
 import Faqs from "./Faqs";
 import Insights from "./Insights";

@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { act, useState } from "react";
+import { useState } from "react";
 
 const Faqs = ({ data }: any) => {
   const [activeQuestion, setActiveQuestion] = useState("");
@@ -9,7 +10,7 @@ const Faqs = ({ data }: any) => {
     <div
       className={`border border-blue-800 bg-white rounded-xl overflow-hidden`}
     >
-      {data?.map((faqs: any, index: any) => {
+      {data?.map((faqs: any, index: number) => {
         return (
           <div key={index}>
             <div
