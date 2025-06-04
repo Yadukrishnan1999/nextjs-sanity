@@ -6,6 +6,8 @@ import MainBanner from "./MainBanner";
 import MustReads from "./MustReads";
 import ViewAllArticles from "./ViewAllArticles";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   let project: any;
   try {
