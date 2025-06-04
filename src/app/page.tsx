@@ -19,7 +19,7 @@ export default async function Home() {
       <div className="self-end mr-8">
         <AdminButton />
       </div>
-      <div className="pt-80">
+      <div className="pt-50">
         <Link href="/home">
           <Image height={200} width={200} src={Logo} alt={"ZipCare"} />
         </Link>
