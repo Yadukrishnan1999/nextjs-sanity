@@ -43,7 +43,7 @@ export const getHomePageData = () => {
     projectId: "waa03wpn",
     dataset: "production",
     apiVersion: "2025-06-02",
-    useCdn: true, // or false
+    useCdn: false, // or false
   });
 
   return client.fetch(query);
