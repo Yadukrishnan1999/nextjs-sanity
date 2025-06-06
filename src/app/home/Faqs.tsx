@@ -38,7 +38,7 @@ const Faqs = ({ data }: any) => {
               </div>
             </div>
             <div
-              className={`${faqs?.qid === activeQuestion ? "" : "hidden"} transition-all duration-300 ease-in-out overflow-hidden text-sm bg-white px-4 py-6 border-blue-800 border-b`}
+              className={`${faqs?.qid === activeQuestion ? "" : "hidden"} transition-all duration-300 ease-in-out overflow-hidden text-sm bg-white px-4 py-6 ${data?.length === index + 1 ? "" : "border-blue-800 border-b"}`}
             >
               {faqs?.answer}
             </div>
