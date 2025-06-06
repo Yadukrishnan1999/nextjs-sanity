@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import { fn } from "storybook/test";
-
 import ViewAllButton from "./ViewAllButton";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
