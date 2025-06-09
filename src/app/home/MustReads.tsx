@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
+import TextPills from "../../../components/TextPills/TextPills";
 
 const MustReads = ({ data }: any) => {
   return (
@@ -7,9 +8,8 @@ const MustReads = ({ data }: any) => {
       <div className="rounded-lg bg-white p-3 backdrop-blur-sm">
         <div className="grid grid-cols-3 items-center">
           <div className="col-span-2">
-            <div className="w-fit rounded-full bg-gray-800 text-white font-bold text-sm py-[4px] px-[12px] whitespace-nowrap mb-[8px]">
-              {data?.category}
-            </div>
+            <TextPills customClasses="mb-[8px]" label={data?.category} />
+
             <div>
               <div className="text-sm font-bold">{data?.headLine}</div>
               <div className="flex space-x-[8px] text-sm font-bold items-center">

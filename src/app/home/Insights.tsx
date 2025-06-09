@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
+import TextPills from "../../../components/TextPills/TextPills";
 
 const Insights = ({ data }: any) => {
   return (
     <div>
-      
       <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
         <Image
           fill
@@ -12,9 +12,10 @@ const Insights = ({ data }: any) => {
           alt={data?.mainImage?.alt}
           className="object-cover"
         />
-        <div className="absolute top-[70%] md:top-[80%] lg:top-[80%] left-[24px] w-fit rounded-full bg-gray-800 text-white font-bold text-sm py-[4px] px-[12px] whitespace-nowrap">
-        {data?.category}
-      </div>
+        <TextPills
+          customClasses="absolute top-[70%] md:top-[80%] lg:top-[80%] left-[24px]"
+          label={data?.category}
+        />
       </div>
       <div className="font-bold text-lg pt-[8px] leading-snug">
         {data?.headLine}
