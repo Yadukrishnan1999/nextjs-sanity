@@ -1,6 +1,8 @@
 "use client";
 
-const ViewAllButton = ({ btnLabel }: ViewAllButton) => {
+import { ViewAllButtonProps } from "@/types/ComponentPropsTypes"
+
+const ViewAllButton = ({ btnLabel }: ViewAllButtonProps) => {
   const clickHandler = () => {
     console.log("Button clicked");
   };

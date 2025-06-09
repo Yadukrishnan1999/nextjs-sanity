@@ -1,21 +1,29 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import ViewAllButton from "../../../components/ViewAllButton";
+import { Faqs, Project } from "@/types/DataTypes";
+import { CollapsibleListData } from "@/types/ComponentPropsTypes";
+import ViewAllButton from "../../../components/ViewAllButton/ViewAllButton";
 import { getHomePageData } from "../../../sanity/sanity-utility";
-import Faqs from "./Faqs";
+// import Faqs from "./Faqs";
 import Insights from "./Insights";
 import MainBanner from "./MainBanner";
 import MustReads from "./MustReads";
+import CollapsibleList from "../../../components/CollapsibleList/CollapsibleList";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  let project: any;
+  let project: Project | undefined;
   try {
     project = await getHomePageData();
   } catch (e) {
     console.error("Error fetching home page data", e);
-    project = null;
   }
+
+  const faqData: CollapsibleListData[] | undefined = project?.faqs?.map(
+    (faq: Faqs) => {
+      return { listData: faq?.question, collapsingData: faq?.answer };
+    }
+  );
 
   return (
     <div>
@@ -46,7 +54,7 @@ export default async function HomePage() {
         <div className="font-bold text-[30px] md:text-[30px] text-blue-800 bg-red pb-[15px]">
           FAQs
         </div>
-        <Faqs data={project?.faqs} />
+        <CollapsibleList data={faqData} />
       </div>
     </div>
   );
