@@ -16,3 +16,8 @@ export type CollapsibleListData = {
   listData: string;
   collapsingData: string;
 };
+
+export type ArrowIconProps = {
+  color: string;
+  direction: string;
+};

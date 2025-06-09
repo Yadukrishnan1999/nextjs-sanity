@@ -1,6 +1,7 @@
 "use client";
 
-import { ViewAllButtonProps } from "@/types/ComponentPropsTypes"
+import { ViewAllButtonProps } from "@/types/ComponentPropsTypes";
+import ArrowIcon from "../ArrowIcon/ArrowIcon";
 
 const ViewAllButton = ({ btnLabel }: ViewAllButtonProps) => {
   const clickHandler = () => {
@@ -18,9 +19,7 @@ const ViewAllButton = ({ btnLabel }: ViewAllButtonProps) => {
         >
           {btnLabel}
         </button>
-        <div
-          className={`h-[12px] w-[12px] bg-transparent border-t-3 border-r-3 border-blue-800 rotate-45`}
-        ></div>
+        <ArrowIcon color={"blue"} direction={"right"} />
       </div>
     </div>
   );

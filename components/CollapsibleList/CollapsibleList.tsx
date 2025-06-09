@@ -6,6 +6,7 @@ import {
   CollapsibleListData,
   CollapsibleListProps,
 } from "@/types/ComponentPropsTypes";
+import ArrowIcon from "../ArrowIcon/ArrowIcon";
 
 const CollapsibleList = ({
   data,
@@ -44,9 +45,10 @@ const CollapsibleList = ({
                   {listItem?.listData}
                 </div>
                 <div>
-                  <div
-                    className={`${activeQuestion === listItem?.id ? "border-white rotate-315" : "border-blue-800 rotate-135"} h-[12px] w-[12px] bg-transparent border-t-3 border-r-3 `}
-                  ></div>
+                  <ArrowIcon
+                    color={`${activeQuestion === listItem?.id ? "white" : "blue"}`}
+                    direction={`${activeQuestion === listItem?.id ? "up" : "down"}`}
+                  />
                 </div>
               </div>
             </div>
