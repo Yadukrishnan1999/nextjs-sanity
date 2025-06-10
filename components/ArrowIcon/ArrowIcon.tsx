@@ -1,4 +1,7 @@
-import { ArrowIconProps } from "@/types/ComponentPropsTypes";
+type ArrowIconProps = {
+  color: string;
+  direction: string;
+};
 
 const ArrowIcon = ({ color = "blue", direction = "down" }: ArrowIconProps) => {
   const getOrientation = () => {

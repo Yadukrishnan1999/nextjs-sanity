@@ -35,8 +35,12 @@ const query = `{
   question,
   answer,
   qid
-  }
+  },
 }`;
+
+const queryTwo = `{"homePage": *[_type == "homePage"]{
+  sections,
+  },}`;
 
 export const getHomePageData = () => {
   const client = createClient({
@@ -47,4 +51,15 @@ export const getHomePageData = () => {
   });
 
   return client.fetch(query);
+};
+
+export const getTestHomePageData = () => {
+  const client = createClient({
+    projectId: "waa03wpn",
+    dataset: "production",
+    apiVersion: "2025-06-02",
+    useCdn: false, // or false
+  });
+
+  return client.fetch(queryTwo);
 };

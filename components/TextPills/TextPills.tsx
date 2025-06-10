@@ -1,4 +1,7 @@
-import { TextPillsProps } from "@/types/ComponentPropsTypes";
+type TextPillsProps = {
+  label: string;
+  customClasses?: string;
+};
 
 const TextPills = ({ label, customClasses = "" }: TextPillsProps) => {
   return (

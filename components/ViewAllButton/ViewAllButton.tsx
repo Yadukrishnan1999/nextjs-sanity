@@ -1,7 +1,10 @@
 "use client";
 
-import { ViewAllButtonProps } from "@/types/ComponentPropsTypes";
 import ArrowIcon from "../ArrowIcon/ArrowIcon";
+
+type ViewAllButtonProps = {
+  btnLabel: string;
+};
 
 const ViewAllButton = ({ btnLabel }: ViewAllButtonProps) => {
   const clickHandler = () => {

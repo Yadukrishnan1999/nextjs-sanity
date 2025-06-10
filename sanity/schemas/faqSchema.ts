@@ -16,7 +16,7 @@ const faqSchema = {
     {
       name: "qid",
       title: "Question id",
-      type: "string",
+      type:"string"
     },
   ],
 };
