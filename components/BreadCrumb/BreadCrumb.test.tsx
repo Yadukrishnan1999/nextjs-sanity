@@ -68,8 +68,8 @@ describe("BreadCrumb Component", () => {
 
     const links = screen.getAllByRole("link");
 
-    expect(links[0]).toHaveClass("text-[#2f0e73]", "font-semibold");
-    expect(links[1]).toHaveClass("text-[#2f0e73]", "font-semibold");
+    expect(links[0]).toHaveClass("text-primary", "font-semibold");
+    expect(links[1]).toHaveClass("text-primary", "font-semibold");
     expect(links[2]).toHaveClass("text-neutral-500", "font-normal");
   });
 

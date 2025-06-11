@@ -21,13 +21,13 @@ const BreadCrumb = ({ items, className }: BreadCrumbProps) => {
                 <Link
                   prefetch={false}
                   aria-current={isLast ? "page" : undefined}
-                  className={`text-[#2f0e73] font-semibold ${isLast && "text-neutral-500 font-normal"}`}
+                  className={`text-primary font-semibold ${isLast && "text-neutral-500 font-normal"}`}
                   href={href}
                 >
                   {title}
                 </Link>
               </li>
-              {!isLast && <li className="text-[#2f0e73]">|</li>}
+              {!isLast && <li className="text-primary">|</li>}
             </Fragment>
           );
         })}

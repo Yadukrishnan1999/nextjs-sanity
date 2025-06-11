@@ -40,7 +40,7 @@ export const Default: Story = {
         </button>
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size={size}>
           <form className="w-[495px] mx-auto">
-            <p className=" font-bold text-[#2f0e73] text-[32px] leading-9 -tracking-[1px] text-center">
+            <p className=" font-bold text-primary text-[32px] leading-9 -tracking-[1px] text-center">
               Select Type of plan
             </p>
             <p className="font-semibold text-base leading-[22px] text-[#393939] text-center">
@@ -66,5 +66,10 @@ export const Default: Story = {
   },
   args: {
     size: "lg",
+    isOpen: true,
+    onClose() {
+      console.log("Closing");
+    },
+    children: <></>,
   },
 };

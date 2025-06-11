@@ -2,8 +2,7 @@ import React from "react";
 
 type ModalProps = {
   isOpen: boolean;
-  onClose: () => void;
-  title?: string;
+  onClose?: () => void;
   children: React.ReactNode;
   size?: "sm" | "md" | "lg";
 };
@@ -24,7 +23,7 @@ const Modal = ({ isOpen, onClose, children, size = "md" }: ModalProps) => {
         aria-modal="true"
       >
         <button
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-1"
+          className="absolute top-2 right-2 text-black focus:outline-none p-2"
           onClick={onClose}
           aria-label="Close modal"
         >
