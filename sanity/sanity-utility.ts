@@ -38,10 +38,6 @@ const query = `{
   },
 }`;
 
-const queryTwo = `{"homePage": *[_type == "homePage"]{
-  sections,
-  },}`;
-
 export const getHomePageData = () => {
   const client = createClient({
     projectId: "waa03wpn",
@@ -53,13 +49,26 @@ export const getHomePageData = () => {
   return client.fetch(query);
 };
 
-export const getTestHomePageData = () => {
+const queryTwo = `*[_type == "homePage" && slug.current == $slug][0]{
+  sections[]->{
+    _type,
+    title,
+    items[]{
+      question,
+      answer
+    }
+  },
+  slug,
+  title
+}`;
+
+export const getTestHomePageData = (slug: string) => {
   const client = createClient({
     projectId: "waa03wpn",
     dataset: "production",
     apiVersion: "2025-06-02",
-    useCdn: false, // or false
+    useCdn: false,
   });
 
-  return client.fetch(queryTwo);
+  return client.fetch(queryTwo, { slug });
 };
