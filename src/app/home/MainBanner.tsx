@@ -19,7 +19,7 @@ const MainBanner = ({ data }: any) => {
         </Typography>
         <Typography
           variant="b3"
-          className="font-sm columns-1 lg:columns-2 gap-2"
+          className="columns-1 lg:columns-2 gap-3 lg:gap-6"
         >
           {data?.whatIsZipcare}
         </Typography>

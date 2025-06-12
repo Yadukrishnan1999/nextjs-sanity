@@ -35,7 +35,7 @@ const Accordion = ({
   };
   return (
     <div
-      className={`w-full mx-auto rounded-2xl border border-primary overflow-hidden ${className}`}
+      className={`w-full rounded-2xl border border-primary overflow-hidden ${className}`}
     >
       {items.map((item) => (
         <div key={item.id} className="border-b border-primary last:border-none">

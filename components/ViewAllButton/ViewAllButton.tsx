@@ -15,7 +15,7 @@ const ViewAllButton = ({ btnLabel }: ViewAllButtonProps) => {
           onClick={() => {
             clickHandler();
           }}
-          className={`text-blue-800 text-lg font-bold cursor-pointer`}
+          className={`text-primary text-lg font-bold cursor-pointer`}
         >
           {btnLabel}
         </button>
