@@ -27,9 +27,9 @@ const ArticleCard = ({
       <Typography variant="h3" className={`text-[#393939]`}>{title}</Typography>
       <Typography variant="h4" className={`text-[#5f5f5f]`}>{description}</Typography>
       <div className="text-[#5f5f5f] flex items-center gap-1 font-semibold text-sm leading-5">
-        <span>{author}</span>
+       <Typography variant="span">{author}</Typography>
         <div className=" h-1 w-1 bg-[#5f5f5f] rounded-full" />
-        <span>{date}</span>
+        <Typography variant="span">{date}</Typography>
       </div>
     </div>
   );
