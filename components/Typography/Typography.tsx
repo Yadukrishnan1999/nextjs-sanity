@@ -4,7 +4,7 @@
 import React from "react";
 
 type TypographyProps = {
-  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "body" | "caption";
+  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "body" | "caption" | "span";
   children: React.ReactNode;
   className?: string;
 };
@@ -18,16 +18,16 @@ const variantClasses: Record<string, string> = {
   h5: "font-bold text-[10px] lg:text-[14px] leading-[100%] lg:leading-[20px] tracking-[0] mb-[16px] lg:mb-[24px]",
   h6: "font-medium text-[10px] leading-[100%] tracking-[0] mb-[16px]",
   body: "text-base",
+  span: "inline font-medium text-[10px] leading-[100%] tracking-[0] mb-[16px]",
 };
 
 export default function Typography({
   variant = "body",
+
   children,
   className = "",
 }: TypographyProps) {
   const baseClass = variantClasses[variant] || "";
 
-  return (
-    <div className={`${baseClass} ${className} tracking- `}>{children}</div>
-  );
+  return <div className={`${baseClass} ${className}`}>{children}</div>;
 }
