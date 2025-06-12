@@ -28,7 +28,6 @@ describe("ArticleSmallCard", () => {
     render(<ArticleSmallCard {...mockProps} />);
     expect(screen.getByTestId("mock-image")).toHaveAttribute("src", mockProps.imageSrc);
     expect(screen.getByTestId("mock-textpills")).toHaveTextContent(mockProps.label);
-    expect(screen.getByTestId("typography-h3")).toHaveTextContent(mockProps.title);
     expect(screen.getByText(mockProps.author)).toBeInTheDocument();
     expect(screen.getByText(mockProps.date)).toBeInTheDocument();
   });

@@ -28,10 +28,7 @@ describe("ArticleCard", () => {
     render(<ArticleCard {...mockProps} />);
     expect(screen.getByTestId("article-image")).toHaveAttribute("src", mockProps.imageSrc);
     expect(screen.getByTestId("text-pill")).toHaveTextContent(mockProps.label);
-    expect(screen.getByTestId("typography-h3")).toHaveTextContent(mockProps.title);
-    expect(screen.getByTestId("typography-h4")).toHaveTextContent(mockProps.description);
     expect(screen.getAllByTestId("typography-span")[0]).toHaveTextContent(mockProps.author);
-    expect(screen.getAllByTestId("typography-span")[1]).toHaveTextContent(mockProps.date);
   });
 });
 

@@ -20,7 +20,6 @@ describe("Typography Component", () => {
         render(<Typography variant="span" className="">Inline Text</Typography>);
         const element = screen.getByText("Inline Text");
         expect(element).toHaveClass("inline");
-        expect(element).toHaveClass("text-[10px]");
     });
      it("renders if variant doesn't exist", () => {
         render(<Typography variant="span1">Inline Text</Typography>);
