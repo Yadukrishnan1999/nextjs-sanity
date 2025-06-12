@@ -1,36 +1,45 @@
 import Image from "../Image/Image";
 import TextPills from "../TextPills/TextPills";
 import Typography from "../Typography/Typography";
-type ArticleSmallCardProps = {
+export type ArticleSmallCardProps = {
   imageSrc: string;
   label: string;
   title: string;
-  description: string;
   author: string;
   date: string;
+  className?: string;
 };
 
 const ArticleSmallCard = ({
   imageSrc,
   label,
   title,
-  description,
   author,
   date,
+  className,
 }: ArticleSmallCardProps) => {
   return (
-    <div className="w-[365px] bg-linear-to-b from-[#FF9501] to-[#CD00C9] p-0.5 rounded-2xl">
-      <div className="flex bg-white p-2 rounded-2xl">
+    <div
+      className={` bg-linear-to-b from-[#FF9501] to-[#CD00C9] p-0.5 rounded-[18px] ${className}`}
+    >
+      <div className="grid grid-cols-[1fr_100px] bg-white p-2 rounded-2xl">
         <div className="flex flex-col">
           <TextPills label={label} />
-          <Typography variant="h3" className={"text-[#393939]"}>{title}</Typography>
-          <div className="text-[#5f5f5f] flex items-center gap-1 font-medium text-[10px] leading-none">
-            <span>{author}</span>
+          <Typography variant="b3_bold" className="line-clamp-2">
+            {title}
+          </Typography>
+          <div className="text-[#5f5f5f] flex items-center gap-1 font-semibold text-[10px] lg:text-sm leading-none lg:leading-5 pt-1">
+            <Typography variant="span">{author}</Typography>
             <div className=" h-1 w-1 bg-[#5f5f5f] rounded-full" />
-            <span>{date}</span>
+            <time dateTime={date}>{date}</time>
           </div>
         </div>
-        <Image src={imageSrc} innerClass="w-auto h-[100px] rounded-2xl" />
+        <Image
+          width={100}
+          height={100}
+          src={imageSrc}
+          innerClass="w-auto h-[100px] rounded-2xl"
+        />
       </div>
     </div>
   );
