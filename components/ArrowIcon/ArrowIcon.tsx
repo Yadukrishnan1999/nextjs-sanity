@@ -15,6 +15,7 @@ const ArrowIcon = ({
   return (
     <div
       className={`h-[12px] w-[12px] bg-transparent border-t-3 border-r-3 ${orientation[direction]} ${className}`}
+      data-testid={`arrow-icon-${direction}`}
     ></div>
   );
 };

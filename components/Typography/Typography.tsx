@@ -4,7 +4,7 @@
 import React from "react";
 
 type TypographyProps = {
-  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "body" | "caption" | "span";
+  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "b3" | "body" | "span";
   children: React.ReactNode;
   className?: string;
 };
@@ -23,7 +23,6 @@ const variantClasses: Record<string, string> = {
 
 export default function Typography({
   variant = "body",
-
   children,
   className = "",
 }: TypographyProps) {
