@@ -1,6 +1,6 @@
 import Image from "../Image/Image";
 import TextPills from "../TextPills/TextPills";
-
+import Typography from "../Typography/Typography";
 type ArticleSmallCardProps = {
   imageSrc: string;
   label: string;
@@ -23,9 +23,7 @@ const ArticleSmallCard = ({
       <div className="flex bg-white p-2 rounded-2xl">
         <div className="flex flex-col">
           <TextPills label={label} />
-          <div className=" text-[#393939] font-bold text-base leading-[22px] tracking-normal">
-            {title}
-          </div>
+          <Typography variant="h3" className={"text-[#393939]"}>{title}</Typography>
           <div className="text-[#5f5f5f] flex items-center gap-1 font-medium text-[10px] leading-none">
             <span>{author}</span>
             <div className=" h-1 w-1 bg-[#5f5f5f] rounded-full" />

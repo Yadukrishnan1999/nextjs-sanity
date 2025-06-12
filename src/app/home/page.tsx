@@ -8,6 +8,7 @@ import Insights from "./Insights";
 import MainBanner from "./MainBanner";
 import MustReads from "./MustReads";
 import CollapsibleList from "../../../components/CollapsibleList/CollapsibleList";
+ import Typography from "../../../components/Typography/Typography";
 
 export const dynamic = "force-dynamic";
 
@@ -29,9 +30,7 @@ export default async function HomePage() {
     <div>
       <MainBanner data={project?.banners?.[0]} />
       <div className="px-[20px] pt-[20px] lg:px-[50px] bg-white pb-8">
-        <div className="font-bold text-[30px] md:text-[30px] text-blue-800 pt-3 bg-red pb-[15px]">
-          Insight on tech care
-        </div>
+         <Typography variant="h1" className="text-blue-800 pt-3 bg-red pb-[15px]">Insight on tech care</Typography> 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {project?.insights?.map((data: any, index: number) => (
             <Insights key={index} data={data} />
@@ -40,9 +39,7 @@ export default async function HomePage() {
         <ViewAllButton btnLabel="View all articles" />
       </div>
       <div className="px-[20px] lg:px-[50px] pt-6 pb-8">
-        <div className="font-bold text-[30px] md:text-[30px] text-blue-800 bg-red pb-[15px]">
-          Must reads!
-        </div>
+        <Typography variant="h1" className="text-blue-800 pt-3 bg-red pb-[15px]">Must reads!</Typography> 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {project?.mustReads?.map((data: any, index: number) => (
             <MustReads key={index} data={data} />
@@ -51,9 +48,7 @@ export default async function HomePage() {
         <ViewAllButton btnLabel="View all articles" />
       </div>
       <div className="px-[20px] lg:px-[50px] pt-6 bg-white pb-8">
-        <div className="font-bold text-[30px] md:text-[30px] text-blue-800 bg-red pb-[15px]">
-          FAQs
-        </div>
+          <Typography variant="h1" className="text-blue-800 pt-3 bg-red pb-[15px]">FAQs</Typography> 
         <CollapsibleList data={faqData} />
       </div>
     </div>

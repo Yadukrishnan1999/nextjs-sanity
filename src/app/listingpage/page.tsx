@@ -2,9 +2,9 @@ import { Faqs, Project } from "@/types/DataTypes";
 import { getHomePageData } from "../../../sanity/sanity-utility";
 import { CollapsibleListData } from "@/types/ComponentPropsTypes";
 import CollapsibleList from "../../../components/CollapsibleList/CollapsibleList";
-import Title from "../../../components/Title/Title";
 import BreadCrumb from "../../../components/BreadCrumb/BreadCrumb";
 import Image from "../../../components/Image/Image";
+import Typography from "../../../components/Typography/Typography";
 
 export const dynamic = "force-dynamic";
 const page = async () => {
@@ -31,7 +31,7 @@ const page = async () => {
       />
       <section className="px-5 lg:px-[50px] flex justify-between gap-4 lg:gap-10 py-8">
         <div>
-          <Title text="Your device protection expert!" />
+          <Typography variant="h1">Your device protection expert!</Typography>
           <p>
             Discover how to extend the lifespan of your appliances and avoid
             costly repairs. Get essential tips and tricks to keep your
@@ -51,10 +51,10 @@ const page = async () => {
         />
       </section>
       <section className="px-[20px] lg:px-[50px] pt-6 bg-white pb-8">
-        <Title text="Buying guide" />
+        <Typography variant="h1">Buying guide</Typography>
       </section>
       <section className="px-[20px] lg:px-[50px] pt-6 bg-white pb-8">
-        <Title text="FAQs" className="pb-[15px]" />
+        <Typography variant="h1" className="pb-[15px]">FAQs</Typography>
         <CollapsibleList data={faqData} />
       </section>
     </main>

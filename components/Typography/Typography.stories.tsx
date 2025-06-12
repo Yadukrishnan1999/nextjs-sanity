@@ -1,23 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import Title from "./Title";
+import Typography from "./Typography";
 
 const meta = {
-  title: "Components/Title",
-  component: Title,
+  title: "Components/Typography",
+  component: Typography,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {
-    text: { control: "text" },
+    children: { control: "object" },
   },
-} satisfies Meta<typeof Title>;
+} satisfies Meta<typeof Typography>;
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    text: "Your device protection expert!",
+    children: "Your device protection expert!",
   },
 };

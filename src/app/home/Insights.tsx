@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import TextPills from "../../../components/TextPills/TextPills";
-
+import Typography from "../../../components/Typography/Typography";
 const Insights = ({ data }: any) => {
   return (
     <div>
@@ -17,10 +17,8 @@ const Insights = ({ data }: any) => {
           label={data?.category}
         />
       </div>
-      <div className="font-bold text-lg pt-[8px] leading-snug">
-        {data?.headLine}
-      </div>
-      <p className="text-sm text-gray-500">{data?.description}</p>
+      <Typography variant="h3" className={`pt-[8px]`}>{data?.headLine}</Typography>
+      <Typography variant="h4" className={`text-gray-500`}>{data?.description}</Typography>
       <div className="flex space-x-[8px] text-sm font-bold items-center">
         <span className="text-gray-500">{data?.Author}</span>
         <div className="rounded-full h-[6px] w-[6px] bg-gray-500"></div>

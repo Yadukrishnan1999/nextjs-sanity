@@ -1,12 +1,8 @@
 import { TextPillsProps } from "@/types/ComponentPropsTypes";
-
+import Typography from "../Typography/Typography";
 const TextPills = ({ label, customClasses = "" }: TextPillsProps) => {
   return (
-    <div
-      className={`${customClasses} w-fit rounded-full bg-gray-800 text-white font-bold text-sm py-[4px] px-[12px] whitespace-nowrap`}
-    >
-      {label}
-    </div>
+    <Typography variant="h5" className={`${customClasses} w-fit rounded-full bg-gray-800 text-white py-[4px] px-[12px] whitespace-nowrap`}>{label}</Typography> 
   );
 };
 

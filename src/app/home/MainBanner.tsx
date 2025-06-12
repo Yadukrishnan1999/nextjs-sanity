@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
+import Typography from "../../../components/Typography/Typography";
 
 const MainBanner = ({ data }: any) => {
   return (
@@ -13,12 +14,8 @@ const MainBanner = ({ data }: any) => {
         />
       </div>
       <div className="px-[20px] lg:px-[50px]">
-        <div className="font-bold text-[30px] md:text-[30px] text-blue-800 pt-3 bg-red">
-          What is ZipCare?
-        </div>
-        <p className="font-sm columns-1 lg:columns-2 gap-2">
-          {data?.whatIsZipcare}
-        </p>
+        <Typography variant="h1" className="text-blue-800 pt-3 bg-red pb-[15px]">What is ZipCare?</Typography> 
+        <Typography variant="b3" className="font-sm columns-1 lg:columns-2 gap-2">{data?.whatIsZipcare}</Typography> 
       </div>
     </div>
   );

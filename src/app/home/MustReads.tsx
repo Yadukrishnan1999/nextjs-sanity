@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import TextPills from "../../../components/TextPills/TextPills";
+import Typography from "../../../components/Typography/Typography";
 
 const MustReads = ({ data }: any) => {
   return (
@@ -11,7 +12,7 @@ const MustReads = ({ data }: any) => {
             <TextPills customClasses="mb-[8px]" label={data?.category} />
 
             <div>
-              <div className="text-sm font-bold">{data?.headLine}</div>
+              <Typography variant="h3">{data?.headLine}</Typography>
               <div className="flex space-x-[8px] text-sm font-bold items-center">
                 <span className="text-gray-500">{data?.Author}</span>
                 <div className="rounded-full h-[6px] w-[6px] bg-gray-500"></div>

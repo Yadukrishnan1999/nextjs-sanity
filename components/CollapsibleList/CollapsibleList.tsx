@@ -7,6 +7,7 @@ import {
   CollapsibleListProps,
 } from "@/types/ComponentPropsTypes";
 import ArrowIcon from "../ArrowIcon/ArrowIcon";
+import Typography from "../Typography/Typography";
 
 const CollapsibleList = ({
   data,
@@ -39,11 +40,7 @@ const CollapsibleList = ({
               }}
             >
               <div className={`flex space-x-4 justify-between items-center`}>
-                <div
-                  className={`${activeQuestion === listItem?.id ? borderColor : ""} font-bold text-lg`}
-                >
-                  {listItem?.listData}
-                </div>
+                <Typography variant="h2" className={`${activeQuestion === listItem?.id ? borderColor : ""}`}>{listItem?.listData}</Typography>
                 <div>
                   <ArrowIcon
                     color={`${activeQuestion === listItem?.id ? "white" : "blue"}`}
@@ -52,11 +49,7 @@ const CollapsibleList = ({
                 </div>
               </div>
             </div>
-            <div
-              className={`${listItem?.id === activeQuestion ? "" : "hidden"} transition-all duration-300 ease-in-out overflow-hidden text-sm bg-white px-4 py-6 ${data?.length === index + 1 ? "" : "border-blue-800 border-b"}`}
-            >
-              {listItem?.collapsingData}
-            </div>
+            <Typography variant="h3" className={`${listItem?.id === activeQuestion ? "" : "hidden"} transition-all duration-300 ease-in-out overflow-hidden bg-white px-4 py-6 ${data?.length === index + 1 ? "" : "border-blue-800 border-b"}`}>{listItem?.collapsingData}</Typography>
           </div>
         );
       })}
