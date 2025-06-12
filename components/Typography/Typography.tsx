@@ -4,7 +4,7 @@
 import React from "react";
 
 type TypographyProps = {
-  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "b3" | "body" | "span";
+  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "b3" | "body" | "span" | "span1";
   children: React.ReactNode;
   className?: string;
 };
