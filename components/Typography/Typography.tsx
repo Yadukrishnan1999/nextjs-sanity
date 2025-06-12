@@ -10,7 +10,7 @@ type TypographyProps = {
 };
 
 const variantClasses: Record<string, string> = {
-  h1: "text-[28px] lg:text-[40px] leading-8 lg:leading-11 -tracking-[1px] font-bold",
+  h1: "text-[28px] lg:text-[40px] leading-8 lg:leading-11 -tracking-[1px] font-bold text-primary",
   h2: "font-semibold text-[16px] leading-[24px] tracking-[0] mb-[16px] lg:text-[18px] lg:leading-[28px] lg:mb-[24px]",
   h3: "text-[14px] lg:text-[16px] leading-[20px] lg:leading-[22px] tracking-[0] mb-[16px] lg:mb-[24px] font-bold ",
   b3: "font-normal text-[14px] lg-text-[18px] leading-[20px] lg:leading-[28px] tracking-[0] mb-[16px] lg:mb-[24px]",
@@ -27,5 +27,7 @@ export default function Typography({
 }: TypographyProps) {
   const baseClass = variantClasses[variant] || "";
 
-  return <div className={`${baseClass} ${className} tracking- `}>{children}</div>;
+  return (
+    <div className={`${baseClass} ${className} tracking- `}>{children}</div>
+  );
 }

@@ -14,8 +14,15 @@ const MainBanner = ({ data }: any) => {
         />
       </div>
       <div className="px-[20px] lg:px-[50px]">
-        <Typography variant="h1" className="text-blue-800 pt-3 bg-red pb-[15px]">What is ZipCare?</Typography> 
-        <Typography variant="b3" className="font-sm columns-1 lg:columns-2 gap-2">{data?.whatIsZipcare}</Typography> 
+        <Typography variant="h1" className="pt-3 pb-[15px]">
+          What is ZipCare?
+        </Typography>
+        <Typography
+          variant="b3"
+          className="font-sm columns-1 lg:columns-2 gap-2"
+        >
+          {data?.whatIsZipcare}
+        </Typography>
       </div>
     </div>
   );

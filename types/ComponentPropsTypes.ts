@@ -13,11 +13,7 @@ export type CollapsibleListProps = {
   borderColor?: string;
 };
 export type CollapsibleListData = {
-  listData: string;
-  collapsingData: string;
-};
-
-export type ArrowIconProps = {
-  color: string;
-  direction: string;
+  id: string;
+  title: string;
+  content: string;
 };

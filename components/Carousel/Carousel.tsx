@@ -35,7 +35,7 @@ const Carousel = ({
         onClick={scrollLeft}
         aria-label="Scroll left"
       >
-        <ArrowIcon color="blue" direction="left" />
+        <ArrowIcon direction="left" />
       </button>
       <div
         className="flex flex-col md:flex-row overflow-x-auto scroll-smooth gap-6 p-4 mx-8 hide-scrollbar"
@@ -51,7 +51,7 @@ const Carousel = ({
         onClick={scrollRight}
         aria-label="Scroll right"
       >
-        <ArrowIcon color="blue" direction="right" />
+        <ArrowIcon direction="right" />
       </button>
     </div>
   );
